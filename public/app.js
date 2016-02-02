@@ -24,7 +24,7 @@ window.onload = function(){
 
   var quoteArray = [
     {
-      quote:"Visual Basic is the way forward, I don't know why we are doing Javascript. ",
+      quote:"Visual Basic is the way forward, I don't know why we are doing Javascript.",
       author:"Jay Chetty"
     },
     {
@@ -32,16 +32,20 @@ window.onload = function(){
       author:"Rick"
     },
     {
-      quote:"No Blockers *smug tone* ",
+      quote:"No Blockers *smug tone*",
       author:"Keith"
     },
     {
-      quote:"Scaffold is nothing but a fiery hell. ",
+      quote:"Scaffold is nothing but a fiery hell.",
       author:"Valerie"
     },
     {
-      quote:"CSS is stupid and I hate it. ",
+      quote:"CSS is stupid and I hate it.",
       author:"Oscar Brooks"
+    },
+    {
+      quote:"Before you criticize someone, walk a mile in their shoes. That way, you'll be a mile from them, and you'll have their shoes.",
+      author:"Jack Handey"
     }
   ]
 
@@ -55,7 +59,7 @@ window.onload = function(){
       var blockQuote = document.createElement("blockquote");
       var cite = document.createElement("cite");
       blockQuote.innerText = ('"' + quoteArray[i].quote + '"' );
-      cite.innerText = quoteArray[i].author;
+      cite.innerText = (" " + quoteArray[i].author);
       blockQuote.appendChild(cite);
       quoteArticle.appendChild(blockQuote);
       quoteSection.appendChild(quoteArticle);
@@ -86,13 +90,16 @@ window.onload = function(){
 
 
 
+  var typing = function(){
+    var quoteInput = quoteTextBox.value;
+    var authorInput = quoteAuthorBox.value;
+  }
 
 
 
 
 
-
-
+  quoteTextBox.onkeypress = 
   button.onclick = handleClick;
 
 
@@ -142,5 +149,6 @@ window.onload = function(){
   
   
   colours();
-  document.backgroundColor = "gainsboro";
+  var body = document.getElementsByTagName('body')[0];
+  body.style.backgroundColor = "gainsboro";
 }
